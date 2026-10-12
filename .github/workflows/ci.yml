@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-docker.txt
+      - name: Install dependencies
+        run: pip install -r requirements-docker.txt pytest
+      - name: Build data, features, model and knowledge base
+        run: |
+          python src/generate_data.py
+          python src/build_db.py
+          python src/train_final.py
+          python src/make_docs.py
+      - name: Run tests
+        run: pytest -q
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker build -t fraudsense .

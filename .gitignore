@@ -1,0 +1,24 @@
+# Virtual environments
+venv/
+.venv/
+
+# Python and test caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated data, models and experiment history (recreated by the scripts)
+data/
+models/
+reports/
+mlruns/
+mlflow.db
+*.joblib
+*.pt
+
+# Secrets: never commit keys
+.env
+.streamlit/secrets.toml
+
+# Editor settings
+.vscode/

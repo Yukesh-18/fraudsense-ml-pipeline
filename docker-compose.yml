@@ -1,0 +1,14 @@
+services:
+  fraudsense:
+    build: .
+    ports:
+      - "8501:8501"          # the Streamlit dashboard
+    volumes:
+      - fraudsense_data:/app/data
+      - fraudsense_models:/app/models
+      - fraudsense_reports:/app/reports
+
+volumes:
+  fraudsense_data:
+  fraudsense_models:
+  fraudsense_reports:
