@@ -1,5 +1,7 @@
 # FraudSense: End-to-End Fraud Detection and Investigation
 
+[![CI](https://github.com/Yukesh-18/fraudsense-ml-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/Yukesh-18/fraudsense-ml-pipeline/actions/workflows/ci.yml)
+
 FraudSense scores card transactions for fraud, explains each alert, finds the matching policy rules and similar past cases, watches itself for drift, and shows everything in a web dashboard. It runs locally with Python, SQLite, Flask and Streamlit on **synthetic data** (50,256 transactions, 0.85% fraud).
 
 ## What it does
