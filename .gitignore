@@ -8,7 +8,7 @@ __pycache__/
 .pytest_cache/
 
 # Generated data, models and experiment history (recreated by the scripts)
-data/
+data/*
 models/
 reports/
 mlruns/
@@ -22,3 +22,4 @@ mlflow.db
 
 # Editor settings
 .vscode/
+!data/.gitkeep
