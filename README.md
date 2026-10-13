@@ -60,11 +60,6 @@ A linear-regression "spend surprise" feature was tested and added nothing: PR-AU
 ![Cost vs alert threshold](assets/threshold_cost.png)
 ![What drives the model](assets/shap_importance.png)
 ![Drift per feature](assets/drift_psi.png)
-![Dashboard overview](assets/dashboard_overview.png)
-![Alert queue and investigation](assets/dashboard_alerts.png)
-![Model health](assets/dashboard_health.png)
-![MLflow run comparison](assets/mlflow_compare.png)
-![AI summary](assets/ai_summary.png)
 
 ## Architecture
 
